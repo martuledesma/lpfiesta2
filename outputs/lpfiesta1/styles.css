@@ -105,12 +105,22 @@ ul {
   text-transform: uppercase;
 }
 
-.warning-tape span {
-  display: block;
+.warning-tape .tape-track {
+  display: flex;
   width: max-content;
-  padding: 0.42rem 0;
   white-space: nowrap;
-  animation: tape 18s linear infinite;
+  animation: tape 20s linear infinite;
+}
+
+.warning-tape .tape-set {
+  display: flex;
+  gap: 1.6rem;
+  padding-right: 1.6rem;
+}
+
+.warning-tape .tape-set span {
+  display: block;
+  padding: 0.42rem 0;
 }
 
 .tape-top {
@@ -334,6 +344,10 @@ ul {
   font-size: clamp(1.35rem, 3.3vw, 2.7rem);
   line-height: 0.95;
   text-transform: uppercase;
+  text-shadow:
+    0 0 1rem rgba(119, 255, 241, 0.52),
+    0 0 1.7rem rgba(244, 255, 37, 0.16);
+  animation: festival-dim 2.35s ease-in-out infinite;
 }
 
 .hero-meta {
@@ -795,7 +809,31 @@ footer {
   }
 
   to {
-    transform: translateX(-33.33%);
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes festival-dim {
+  0%,
+  100% {
+    opacity: 1;
+    filter: brightness(1.18) saturate(1.1);
+    text-shadow:
+      0 0 1rem rgba(119, 255, 241, 0.58),
+      0 0 1.7rem rgba(244, 255, 37, 0.2);
+  }
+
+  48% {
+    opacity: 0.46;
+    filter: brightness(0.72) saturate(0.82);
+    text-shadow:
+      0 0 0.22rem rgba(119, 255, 241, 0.18),
+      0 0 0.6rem rgba(244, 255, 37, 0.08);
+  }
+
+  64% {
+    opacity: 0.86;
+    filter: brightness(1.05);
   }
 }
 
@@ -993,6 +1031,11 @@ footer {
   }
 
   .floating-preventa {
+    animation: none;
+  }
+
+  .warning-tape .tape-track,
+  .hero-kicker {
     animation: none;
   }
 }
