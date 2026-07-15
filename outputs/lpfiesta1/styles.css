@@ -217,7 +217,7 @@ ul {
 .hero-copy {
   position: relative;
   z-index: 4;
-  width: min(100%, 52rem);
+  width: min(100%, 40rem);
   padding-left: 3.3rem;
 }
 
@@ -354,7 +354,7 @@ ul {
 }
 
 .hero-line {
-  max-width: 36rem;
+  max-width: 28rem;
   margin: 0 0 1.25rem;
   color: rgba(245, 242, 223, 0.88);
   font-size: clamp(0.92rem, 1.8vw, 1.12rem);
@@ -381,7 +381,7 @@ ul {
 
 .photo-stack {
   position: absolute;
-  inset: 6.2rem 2.5rem auto auto;
+  inset: 7rem 1.4rem auto auto;
   z-index: 3;
   width: min(52vw, 37rem);
   min-height: 35rem;
@@ -631,20 +631,6 @@ h3 {
   padding: clamp(1rem, 3vw, 1.6rem);
 }
 
-.ticket-pass {
-  margin: 0 0 1rem;
-  overflow: hidden;
-  border: 1px solid rgba(245, 242, 223, 0.28);
-  background: #090908;
-}
-
-.ticket-pass img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 2.05 / 1;
-  object-fit: cover;
-}
-
 .ticket-tier.featured {
   border-color: rgba(255, 88, 138, 0.72);
   box-shadow: inset 0 0 0 1px rgba(255, 88, 138, 0.28);
@@ -698,9 +684,17 @@ h3 {
 
 .split-section {
   display: grid;
-  grid-template-columns: minmax(15rem, 0.8fr) minmax(18rem, 1.2fr);
+  grid-template-columns: minmax(14rem, 0.72fr) minmax(24rem, 1.28fr);
   gap: clamp(2rem, 6vw, 4rem);
   align-items: center;
+}
+
+.section-intro {
+  max-width: 24rem;
+}
+
+.section-intro h2 {
+  font-size: clamp(1.8rem, 4.2vw, 3.9rem);
 }
 
 .spotify-frame {
@@ -785,6 +779,34 @@ footer {
   text-transform: uppercase;
 }
 
+.limited-note {
+  margin: 0.8rem 0 0.2rem;
+  color: var(--pink);
+  font-family: "Archivo Black", Inter, system-ui, sans-serif;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+}
+
+.floating-preventa {
+  position: fixed;
+  right: clamp(0.75rem, 2.5vw, 1.6rem);
+  bottom: clamp(0.75rem, 2.5vw, 1.6rem);
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  border: 1px solid var(--acid);
+  border-radius: 999px;
+  padding: 0 1.2rem;
+  color: #11110f;
+  background: var(--acid);
+  font-family: "Archivo Black", Inter, system-ui, sans-serif;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  box-shadow: 0 0.9rem 2.2rem rgba(0, 0, 0, 0.44);
+}
+
 @keyframes tape {
   from {
     transform: translateX(0);
@@ -842,6 +864,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .section-intro {
+    max-width: none;
+  }
+
   .experience-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -870,6 +896,7 @@ footer {
 
   .hero-copy {
     justify-self: start;
+    width: min(100%, 34rem);
     padding-left: 2.2rem;
   }
 
