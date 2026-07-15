@@ -584,11 +584,23 @@ h3 {
   display: flex;
   flex-direction: column;
   padding: clamp(1rem, 3vw, 1.6rem);
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    background 220ms ease,
+    box-shadow 220ms ease;
 }
 
 .ticket-tier.featured {
   border-color: rgba(255, 88, 138, 0.72);
   box-shadow: inset 0 0 0 1px rgba(255, 88, 138, 0.28);
+}
+
+.ticket-tier:hover {
+  border-color: rgba(244, 255, 37, 0.82);
+  background: rgba(0, 0, 0, 0.42);
+  box-shadow: 0 1rem 2.2rem rgba(0, 0, 0, 0.24);
+  transform: translateY(-0.35rem);
 }
 
 .ticket-tier h3 {
@@ -617,6 +629,16 @@ h3 {
   gap: 1rem;
   align-items: start;
   padding: 0.9rem 1rem;
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    background 220ms ease;
+}
+
+.kit-item:hover {
+  border-color: rgba(255, 88, 138, 0.74);
+  background: rgba(255, 88, 138, 0.08);
+  transform: translateX(0.35rem);
 }
 
 .kit-item span {
@@ -653,9 +675,19 @@ h3 {
 }
 
 .spotify-frame {
-  min-height: 14.5rem;
+  min-height: 9.5rem;
   border: 1px solid rgba(244, 255, 37, 0.56);
   background: #11110f;
+  transition:
+    transform 220ms ease,
+    border-color 220ms ease,
+    box-shadow 220ms ease;
+}
+
+.spotify-frame:hover {
+  border-color: rgba(119, 255, 241, 0.75);
+  box-shadow: 0 0 1.5rem rgba(119, 255, 241, 0.12);
+  transform: translateY(-0.25rem);
 }
 
 .spotify-frame iframe {
@@ -670,6 +702,16 @@ h3 {
 .experience-card {
   min-height: 23rem;
   overflow: hidden;
+  transition:
+    transform 240ms ease,
+    border-color 240ms ease,
+    box-shadow 240ms ease;
+}
+
+.experience-card:hover {
+  border-color: rgba(244, 255, 37, 0.8);
+  box-shadow: 0 1rem 2.4rem rgba(0, 0, 0, 0.3);
+  transform: translateY(-0.35rem);
 }
 
 .experience-card img {
@@ -677,6 +719,14 @@ h3 {
   width: 100%;
   height: 13rem;
   object-fit: cover;
+  transition:
+    filter 240ms ease,
+    transform 420ms ease;
+}
+
+.experience-card:hover img {
+  filter: saturate(1.24) contrast(1.14);
+  transform: scale(1.04);
 }
 
 .experience-card > div {
@@ -688,40 +738,8 @@ h3 {
   font-size: clamp(1.1rem, 2.2vw, 1.55rem);
 }
 
-.experience-card.text-only {
-  display: grid;
-  align-items: end;
-  background:
-    repeating-linear-gradient(125deg, rgba(244, 255, 37, 0.09) 0 1px, transparent 1px 12px),
-    rgba(0, 0, 0, 0.3);
-}
-
 .experience-card.secret {
   border-color: rgba(119, 255, 241, 0.66);
-}
-
-.experience-items {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.experience-items article {
-  border: 1px solid rgba(244, 255, 37, 0.42);
-  padding: clamp(0.95rem, 2.4vw, 1.25rem);
-  background:
-    repeating-linear-gradient(125deg, rgba(244, 255, 37, 0.08) 0 1px, transparent 1px 12px),
-    rgba(0, 0, 0, 0.28);
-}
-
-.experience-items h3 {
-  color: var(--acid);
-  font-size: clamp(1rem, 2vw, 1.28rem);
-}
-
-.experience-items p {
-  margin: 0.55rem 0 0;
 }
 
 footer {
@@ -760,6 +778,15 @@ footer {
   font-size: 0.72rem;
   text-transform: uppercase;
   box-shadow: 0 0.9rem 2.2rem rgba(0, 0, 0, 0.44);
+  animation: cta-pulse 2.8s ease-in-out infinite;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.floating-preventa:hover {
+  box-shadow: 0 1rem 2.4rem rgba(244, 255, 37, 0.24);
+  transform: translateY(-0.18rem);
 }
 
 @keyframes tape {
@@ -769,6 +796,19 @@ footer {
 
   to {
     transform: translateX(-33.33%);
+  }
+}
+
+@keyframes cta-pulse {
+  0%,
+  100% {
+    box-shadow: 0 0.9rem 2.2rem rgba(0, 0, 0, 0.44);
+  }
+
+  50% {
+    box-shadow:
+      0 0.9rem 2.2rem rgba(0, 0, 0, 0.44),
+      0 0 0 0.42rem rgba(244, 255, 37, 0.16);
   }
 }
 
@@ -888,8 +928,7 @@ footer {
 
   .festival-stats,
   .ticket-grid,
-  .experience-grid,
-  .experience-items {
+  .experience-grid {
     grid-template-columns: 1fr;
   }
 
@@ -951,5 +990,9 @@ footer {
     opacity: 1;
     transform: none;
     filter: none;
+  }
+
+  .floating-preventa {
+    animation: none;
   }
 }

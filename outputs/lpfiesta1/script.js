@@ -74,7 +74,6 @@ const animatedItems = [
   [".kit-item", "reveal-left", 90],
   [".split-section > div", "reveal-right", 120],
   [".experience-card", "reveal-zoom", 80],
-  [".experience-items article", "reveal-left", 80],
   [".section-head", "reveal-left", 0],
   [".tickets-panel", "reveal-left", 110],
   ["footer span", "reveal-right", 80],
