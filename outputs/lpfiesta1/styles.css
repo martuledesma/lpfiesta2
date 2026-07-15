@@ -774,12 +774,39 @@ h3 {
 
 footer {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   gap: 1rem;
   color: rgba(245, 242, 223, 0.68);
   font-size: 0.78rem;
   font-weight: 800;
   text-transform: uppercase;
+}
+
+.linkedin-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid rgba(119, 255, 241, 0.68);
+  border-radius: 4px;
+  color: #11110f;
+  background: var(--cyan);
+  font-family: "Archivo Black", Inter, system-ui, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1;
+  text-transform: none;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.linkedin-link:hover {
+  background: var(--acid);
+  box-shadow: 0 0 1.2rem rgba(119, 255, 241, 0.22);
+  transform: translateY(-0.16rem);
 }
 
 .limited-note {
