@@ -69,9 +69,7 @@ document.addEventListener("pointerdown", (event) => {
 const animatedItems = [
   [".hero-copy", "reveal-zoom", 0],
   [".photo-stack figure", "reveal-zoom", 80],
-  [".concept-copy", "reveal-left", 0],
   [".festival-stats > div", "reveal-zoom", 100],
-  [".timeline-item", "reveal-left", 90],
   [".ticket-tier", "reveal-zoom", 100],
   [".kit-item", "reveal-left", 90],
   [".split-section > div", "reveal-right", 120],

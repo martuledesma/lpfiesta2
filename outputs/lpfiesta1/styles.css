@@ -184,11 +184,11 @@ ul {
 
 .hero {
   position: relative;
-  min-height: clamp(46rem, 76vw, 58rem);
+  min-height: clamp(43rem, 72vw, 55rem);
   display: grid;
   place-items: center start;
   overflow: hidden;
-  padding: clamp(6.5rem, 9vw, 8rem) clamp(1rem, 4vw, 4rem) 8rem;
+  padding: clamp(6.2rem, 9vw, 8rem) clamp(1rem, 4vw, 4rem) 6.8rem;
   isolation: isolate;
 }
 
@@ -217,7 +217,7 @@ ul {
 .hero-copy {
   position: relative;
   z-index: 4;
-  width: min(100%, 40rem);
+  width: min(100%, 38rem);
   padding-left: 3.3rem;
 }
 
@@ -363,6 +363,15 @@ ul {
   text-transform: uppercase;
 }
 
+.hero-schedule {
+  margin: 0.85rem 0 0;
+  color: var(--cyan);
+  font-family: "Archivo Black", Inter, system-ui, sans-serif;
+  font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
 .cta,
 .ticket-button {
   display: inline-flex;
@@ -451,25 +460,12 @@ ul {
   right: 18.2rem;
 }
 
-.concept-section,
-.timeline-section,
 .split-section,
 .kit-section,
 .experience-section,
 .tickets,
 footer {
-  padding: clamp(3.4rem, 7vw, 6rem) clamp(1rem, 5vw, 4rem);
-}
-
-.concept-section {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: clamp(2rem, 6vw, 5rem);
-  align-items: center;
-}
-
-.concept-copy {
-  max-width: 48rem;
+  padding: clamp(2.8rem, 6vw, 5rem) clamp(1rem, 5vw, 4rem);
 }
 
 p,
@@ -477,11 +473,6 @@ li {
   color: rgba(245, 242, 223, 0.82);
   font-size: 0.95rem;
   line-height: 1.65;
-}
-
-.concept-copy small {
-  color: var(--muted);
-  font-size: 0.72rem;
 }
 
 h2,
@@ -501,16 +492,14 @@ h3 {
 }
 
 .festival-stats {
-  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
-  margin-top: 1.8rem;
+  gap: 0.55rem;
+  margin-top: 1rem;
   text-align: center;
 }
 
 .festival-stats > div,
-.timeline-item,
 .ticket-tier,
 .kit-item,
 .experience-card {
@@ -519,14 +508,14 @@ h3 {
 }
 
 .festival-stats > div {
-  padding: clamp(1rem, 3vw, 1.6rem);
+  padding: clamp(0.62rem, 1.7vw, 0.95rem) 0.45rem;
 }
 
 .festival-stats strong {
   display: block;
   color: var(--acid);
   font-family: "Archivo Black", Inter, system-ui, sans-serif;
-  font-size: clamp(2.7rem, 7vw, 5rem);
+  font-size: clamp(1.55rem, 3.4vw, 2.6rem);
   line-height: 0.9;
 }
 
@@ -535,7 +524,7 @@ h3 {
   margin-top: 0.35rem;
   color: var(--paper);
   font-family: "Space Grotesk", Inter, system-ui, sans-serif;
-  font-size: clamp(0.9rem, 2vw, 1.35rem);
+  font-size: clamp(0.62rem, 1.2vw, 0.82rem);
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -549,43 +538,9 @@ h3 {
   max-width: 38rem;
 }
 
-.timeline {
-  display: grid;
-  gap: 0;
-  border-bottom: 1px solid rgba(244, 255, 37, 0.42);
-}
-
-.timeline-item {
-  display: grid;
-  grid-template-columns: minmax(6rem, 0.28fr) 1fr;
-  gap: 1.2rem;
-  align-items: start;
-  border-bottom: 0;
-  padding: clamp(1rem, 3vw, 1.6rem);
-}
-
-.timeline-item + .timeline-item {
-  border-top: 0;
-}
-
-.timeline-item time {
-  color: var(--acid);
-  font-family: "Archivo Black", Inter, system-ui, sans-serif;
-  font-size: clamp(1.7rem, 4vw, 3.2rem);
-  line-height: 0.9;
-}
-
-.timeline-item h3 {
-  color: var(--paper);
-}
-
-.timeline-item p {
-  margin: 0.55rem 0 0;
-}
-
 .tickets {
   position: relative;
-  min-height: 40rem;
+  min-height: 34rem;
   display: grid;
   align-items: center;
   overflow: hidden;
@@ -685,7 +640,7 @@ h3 {
 .split-section {
   display: grid;
   grid-template-columns: minmax(14rem, 0.72fr) minmax(24rem, 1.28fr);
-  gap: clamp(2rem, 6vw, 4rem);
+  gap: clamp(1.4rem, 4vw, 3rem);
   align-items: center;
 }
 
@@ -698,7 +653,7 @@ h3 {
 }
 
 .spotify-frame {
-  min-height: 22rem;
+  min-height: 14.5rem;
   border: 1px solid rgba(244, 255, 37, 0.56);
   background: #11110f;
 }
@@ -859,7 +814,6 @@ footer {
     right: 16rem;
   }
 
-  .concept-section,
   .split-section {
     grid-template-columns: 1fr;
   }
@@ -876,6 +830,7 @@ footer {
 @media (max-width: 760px) {
   .festival-shell {
     width: min(100% - 1rem, 72rem);
+    margin-top: 4.8rem;
   }
 
   .topbar {
@@ -889,13 +844,13 @@ footer {
   }
 
   .hero {
-    min-height: 52rem;
-    align-items: start;
-    padding-top: 8.8rem;
+    display: block;
+    min-height: auto;
+    overflow: visible;
+    padding: 8.7rem 0.85rem 2.8rem;
   }
 
   .hero-copy {
-    justify-self: start;
     width: min(100%, 34rem);
     padding-left: 2.2rem;
   }
@@ -907,21 +862,28 @@ footer {
   }
 
   .photo-stack {
-    inset: auto 0.7rem 2.2rem auto;
-    width: 24rem;
-    min-height: 19rem;
+    position: relative;
+    inset: auto;
+    width: 100%;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.55rem;
+    margin: 1.65rem 0 0;
   }
 
   .polaroid {
-    width: 8.4rem;
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    border-width: 0.34rem;
+    border-bottom-width: 0.78rem;
   }
 
-  .polaroid-one {
-    right: 15rem;
-  }
-
-  .polaroid-two {
-    right: 7.3rem;
+  .polaroid-four,
+  .polaroid-five {
+    display: none;
   }
 
   .festival-stats,
@@ -931,8 +893,9 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .timeline-item {
-    grid-template-columns: 1fr;
+  .festival-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 24rem;
   }
 
 }
@@ -943,16 +906,31 @@ footer {
   }
 
   .title-layer {
-    font-size: clamp(3rem, 18vw, 4.6rem);
+    font-size: clamp(2.45rem, 15vw, 4rem);
   }
 
   .hero-kicker {
     font-size: clamp(1.2rem, 7vw, 2rem);
   }
 
-  .photo-stack {
-    transform: scale(0.82);
-    transform-origin: bottom right;
+  .hero-line {
+    max-width: 18.5rem;
+    font-size: 0.82rem;
+  }
+
+  .hero-meta {
+    gap: 0.45rem;
+  }
+
+  .hero-meta span {
+    padding: 0.34rem 0.44rem;
+    font-size: 0.72rem;
+  }
+
+  .cta,
+  .ticket-button {
+    width: min(100%, 18.5rem);
+    padding: 0 1rem;
   }
 
   footer {
