@@ -973,7 +973,7 @@ footer {
 
   .hero-copy {
     width: min(100%, 34rem);
-    padding-left: 2.2rem;
+    padding-left: 1.65rem;
   }
 
   .vertical-word {
@@ -1026,7 +1026,7 @@ footer {
   }
 
   .title-layer {
-    font-size: clamp(2.45rem, 15vw, 4rem);
+    font-size: clamp(2.25rem, 13vw, 3.55rem);
   }
 
   .hero-kicker {
