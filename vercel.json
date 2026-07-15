@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/",
+      "destination": "/outputs/lpfiesta1/index.html"
+    },
+    {
+      "source": "/:path*",
+      "destination": "/outputs/lpfiesta1/:path*"
+    }
+  ]
+}
