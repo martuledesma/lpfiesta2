@@ -675,22 +675,37 @@ h3 {
 
 .split-section {
   display: grid;
-  grid-template-columns: minmax(14rem, 0.72fr) minmax(24rem, 1.28fr);
-  gap: clamp(1.4rem, 4vw, 3rem);
-  align-items: center;
+  grid-template-columns: minmax(13rem, 0.58fr) minmax(18rem, 1fr);
+  gap: clamp(1rem, 3vw, 2rem);
+  align-items: end;
+  padding-top: clamp(2rem, 4vw, 3.2rem);
+  padding-bottom: clamp(2rem, 4vw, 3.2rem);
+  border-top: 1px solid rgba(244, 255, 37, 0.22);
+  border-bottom: 1px solid rgba(244, 255, 37, 0.22);
+  background:
+    linear-gradient(90deg, rgba(119, 255, 241, 0.05), transparent 38%),
+    rgba(0, 0, 0, 0.16);
 }
 
 .section-intro {
-  max-width: 24rem;
+  max-width: 28rem;
 }
 
 .section-intro h2 {
-  font-size: clamp(1.8rem, 4.2vw, 3.9rem);
+  font-size: clamp(1.35rem, 3vw, 2.35rem);
+  line-height: 1;
+}
+
+.section-intro p:last-child {
+  max-width: 24rem;
+  margin-bottom: 0;
 }
 
 .spotify-frame {
-  min-height: 9.5rem;
+  min-height: 0;
   border: 1px solid rgba(244, 255, 37, 0.56);
+  border-radius: 12px;
+  padding: 0.28rem;
   background: #11110f;
   transition:
     transform 220ms ease,
@@ -707,6 +722,7 @@ h3 {
 .spotify-frame iframe {
   display: block;
   border: 0;
+  height: 152px;
 }
 
 .experience-grid {
